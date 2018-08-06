@@ -5,6 +5,8 @@
  */
 package business;
 
+import java.util.Date;
+
 /**
  *
  * @author minh tuan
@@ -12,6 +14,15 @@ package business;
 public class Student {
     private int studentId;
     private String studentName;
+    private Date birthdate;
+
+    public Date getBirthdate() {
+        return birthdate;
+    }
+
+    public void setBirthdate(Date birthdate) {
+        this.birthdate = birthdate;
+    }
 
     public Student(int studentId, String studentName) {
         this.studentId = studentId;
