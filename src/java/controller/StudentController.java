@@ -5,6 +5,7 @@
  */
 package controller;
 
+import business.Student;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,9 +14,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/list")
-public class StudentController extends HttpServlet{
+public class StudentController extends HttpServlet {
+
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse respone)
-            throws IOException, ServletException{
+            throws IOException, ServletException {
+        Student st = new Student(1,"Nguyen Tho");
+        request.setAttribute("student", st);
+        String url = "/thanks.jsp";
+        getServletContext().getRequestDispatcher(url).forward(request, respone);
+    }
+    
+    @Override
+    public void doGet(HttpServletRequest request, HttpServletResponse respone)
+            throws IOException, ServletException {
+        doPost(request, respone);
     }
 }

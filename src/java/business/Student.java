@@ -7,11 +7,8 @@ package business;
 
 import java.util.Date;
 
-/**
- *
- * @author minh tuan
- */
 public class Student {
+    //Khoi tao
     private int studentId;
     private String studentName;
     private Date birthdate;
@@ -23,7 +20,7 @@ public class Student {
     public void setBirthdate(Date birthdate) {
         this.birthdate = birthdate;
     }
-
+    
     public Student(int studentId, String studentName) {
         this.studentId = studentId;
         this.studentName = studentName;
